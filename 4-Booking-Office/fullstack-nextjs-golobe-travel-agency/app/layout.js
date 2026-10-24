@@ -68,7 +68,7 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  if (mongoose.connection.readyState === 0) {
+  if (mongoose.connection.readyState === 0 && process.env.MONGODB_URI) {
     try {
       await mongoose.connect(process.env.MONGODB_URI);
     } catch (e) {

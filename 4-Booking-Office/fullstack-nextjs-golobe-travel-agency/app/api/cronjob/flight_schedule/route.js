@@ -12,7 +12,7 @@ export async function GET(req) {
 
   const pre = performance.now();
 
-  if (mongoose.connection.readyState !== 1) {
+  if (mongoose.connection.readyState !== 1 && process.env.MONGODB_URI) {
     await mongoose.connect(process.env.MONGODB_URI);
   }
 
