@@ -2,29 +2,35 @@
 # Vibe Studio Ecosystem - Master .gitignore
 # ==========================================
 
-# Dependencies (Tất cả node_modules ở mọi web con)
-node_modules/
-**/node_modules/
+# Dependencies (Tất cả node_modules ở mọi web con và mọi độ sâu)
+node_modules
+**/node_modules
+**/node_modules/**
 .pnp
 .pnp.js
 
 # Build Outputs (Next.js, Vite, React)
-.next/
-**/.next/
-dist/
-**/dist/
-build/
-**/build/
-out/
-**/out/
+.next
+**/.next
+**/.next/**
+dist
+**/dist
+**/dist/**
+build
+**/build
+**/build/**
+out
+**/out
+**/out/**
 
-# Environment Variables & Secrets (Bảo mật thông tin DB, Stripe, API keys)
+# Environment Variables & Secrets
 .env
 .env*.local
 .env.production
 .env.staging
 **/.env
 **/.env*.local
+**/.env.production
 !**/.env.example
 
 # Logs
@@ -34,14 +40,17 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 *.log
-logs/
-**/logs/
+logs
+**/logs
+**/logs/**
 
 # Next.js & Turbopack cache
-.turbo/
-**/.turbo/
-.swc/
-**/.swc/
+.turbo
+**/.turbo
+**/.turbo/**
+.swc
+**/.swc
+**/.swc/**
 
 # Databases & local storage
 *.sqlite
@@ -52,7 +61,8 @@ logs/
 # Editor & OS files
 .DS_Store
 Thumbs.db
-.idea/
+.idea
+**/.idea/**
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
