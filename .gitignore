@@ -1,0 +1,66 @@
+# ==========================================
+# Vibe Studio Ecosystem - Master .gitignore
+# ==========================================
+
+# Dependencies (Tất cả node_modules ở mọi web con)
+node_modules/
+**/node_modules/
+.pnp
+.pnp.js
+
+# Build Outputs (Next.js, Vite, React)
+.next/
+**/.next/
+dist/
+**/dist/
+build/
+**/build/
+out/
+**/out/
+
+# Environment Variables & Secrets (Bảo mật thông tin DB, Stripe, API keys)
+.env
+.env*.local
+.env.production
+.env.staging
+**/.env
+**/.env*.local
+!**/.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+logs/
+**/logs/
+
+# Next.js & Turbopack cache
+.turbo/
+**/.turbo/
+.swc/
+**/.swc/
+
+# Databases & local storage
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+*.sublime-project
+*.sublime-workspace
+
+# Temporary & script files
+*.tsbuildinfo
+next-env.d.ts
+scratch/
