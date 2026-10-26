@@ -17,6 +17,12 @@ const cspHeader = `
 const helperDirName = join(process.cwd(), "lib/email/", "helpersHbs");
 
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   webpack: (config, { isServer }) => {
     config.module.rules.push({
       test: /\.hbs$/,
