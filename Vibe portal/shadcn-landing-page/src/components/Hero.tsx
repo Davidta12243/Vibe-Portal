@@ -34,14 +34,14 @@ export const Hero = () => {
           </a>
 
           <a
-            href="http://localhost:3001"
+            href={(import.meta.env.VITE_APP_SHOP_URL as string) || "http://localhost:3001"}
             target="_blank"
             rel="noreferrer noopener"
             className={`text-base font-semibold px-6 py-5 ${buttonVariants({
               variant: "outline",
             })}`}
           >
-            Vào Web 1 (Shop :3001) ➔
+            Vào Web 1 (Vibe Shop) ➔
           </a>
         </div>
       </div>

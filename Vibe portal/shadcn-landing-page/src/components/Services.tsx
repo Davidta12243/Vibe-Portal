@@ -29,7 +29,7 @@ const subApps: SubAppProps[] = [
     id: "shop",
     title: "1. Vibe Shop",
     port: 3001,
-    url: "http://localhost:3001",
+    url: (import.meta.env.VITE_APP_SHOP_URL as string) || "http://localhost:3001",
     styleRef: "Shopee Clone",
     description: "Sàn thương mại điện tử đa ngành hàng, Flash Sale giá sốc, voucher giảm giá và thanh toán tiện lợi.",
     icon: <ShoppingBag className="w-8 h-8 text-orange-500" />,
@@ -40,7 +40,7 @@ const subApps: SubAppProps[] = [
     id: "food",
     title: "2. Vibe Farm / Food",
     port: 3002,
-    url: "http://localhost:3002",
+    url: (import.meta.env.VITE_APP_FOOD_URL as string) || "http://localhost:3002",
     styleRef: "Sendo Farm Clone",
     description: "Đi chợ online thực phẩm tươi sống, nông sản sạch chuẩn VietGAP, rau củ quả giao theo khung giờ.",
     icon: <Apple className="w-8 h-8 text-emerald-500" />,
@@ -51,7 +51,7 @@ const subApps: SubAppProps[] = [
     id: "pc",
     title: "3. Vibe Tech / PC",
     port: 3003,
-    url: "http://localhost:3003",
+    url: (import.meta.env.VITE_APP_PC_URL as string) || "http://localhost:3003",
     styleRef: "Phúc Anh Clone",
     description: "Linh kiện máy tính chính hãng, công cụ tự build cấu hình PC thông minh, kiểm tra tương thích phần cứng.",
     icon: <Cpu className="w-8 h-8 text-blue-500" />,
@@ -62,7 +62,7 @@ const subApps: SubAppProps[] = [
     id: "travel",
     title: "4. Vibe Travel",
     port: 3004,
-    url: "http://localhost:3004",
+    url: (import.meta.env.VITE_APP_TRAVEL_URL as string) || "http://localhost:3004",
     styleRef: "Traveloka Clone",
     description: "Đặt vé máy bay nội địa & quốc tế, đặt phòng khách sạn, combo tour du lịch nghỉ dưỡng trọn gói.",
     icon: <Plane className="w-8 h-8 text-sky-500" />,
@@ -73,7 +73,7 @@ const subApps: SubAppProps[] = [
     id: "edu",
     title: "5. Vibe Edu",
     port: 3005,
-    url: "http://localhost:3005",
+    url: (import.meta.env.VITE_APP_EDU_URL as string) || "http://localhost:3005",
     styleRef: "Hocmai Clone",
     description: "Nền tảng học tập trực tuyến LMS, video bài giảng chất lượng cao, luyện đề thi và theo dõi tiến độ học.",
     icon: <GraduationCap className="w-8 h-8 text-indigo-500" />,
@@ -84,7 +84,7 @@ const subApps: SubAppProps[] = [
     id: "livestream",
     title: "6. Vibe Live Studio",
     port: 3006,
-    url: "http://localhost:3006",
+    url: (import.meta.env.VITE_APP_LIVESTREAM_URL as string) || "http://localhost:3006",
     styleRef: "Livestream Studio",
     description: "Đặt lịch thuê phòng live setup sẵn máy quay, ánh sáng chuẩn studio, hỗ trợ phát trực tiếp WebRTC.",
     icon: <Video className="w-8 h-8 text-rose-500" />,
@@ -125,8 +125,8 @@ export const Services = () => {
                 <div className="p-3 bg-background rounded-2xl shadow-sm border">
                   {app.icon}
                 </div>
-                <Badge variant="outline" className="font-mono text-xs px-2.5 py-1 font-bold">
-                  Port :{app.port}
+                <Badge variant={app.url.startsWith("http://localhost") ? "outline" : "default"} className="font-mono text-xs px-2.5 py-1 font-bold">
+                  {app.url.startsWith("http://localhost") ? `Port :${app.port}` : "🟢 Live Vercel"}
                 </Badge>
               </div>
 
@@ -159,7 +159,7 @@ export const Services = () => {
                 rel="noreferrer noopener"
                 className={`w-full justify-center group ${buttonVariants({ variant: "default" })}`}
               >
-                <span>Mở phân hệ :{app.port}</span>
+                <span>{app.url.startsWith("http://localhost") ? `Mở phân hệ :${app.port}` : `Mở ${app.title}`}</span>
                 <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
             </CardContent>
