@@ -74,11 +74,11 @@ const subApps: SubAppProps[] = [
     title: "5. Vibe Edu",
     port: 3005,
     url: (import.meta.env.VITE_APP_EDU_URL as string) || "http://localhost:3005",
-    styleRef: "Hocmai Clone",
-    description: "Nền tảng học tập trực tuyến LMS, video bài giảng chất lượng cao, luyện đề thi và theo dõi tiến độ học.",
+    styleRef: "LMS Platform",
+    description: "Nền tảng học tập trực tuyến LMS, bài giảng video, bài tập trắc nghiệm và theo dõi tiến độ học.",
     icon: <GraduationCap className="w-8 h-8 text-indigo-500" />,
     color: "from-indigo-500/10 to-transparent border-indigo-500/20",
-    tags: ["Khóa Học", "LMS", "Luyện Thi"]
+    tags: ["Khóa Học", "LMS", "Trắc Nghiệm"]
   },
   {
     id: "livestream",

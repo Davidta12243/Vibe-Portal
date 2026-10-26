@@ -7,7 +7,7 @@ $apps = @(
     @{ Name = "2. Food [Port 3002]"; Path = "2-Food-Selling\food-ecommerce-app"; Port = 3002 },
     @{ Name = "3. PC [Port 3003]"; Path = "3-Computer-Service\pc-builder"; Port = 3003 },
     @{ Name = "4. Travel [Port 3004]"; Path = "4-Booking-Office\fullstack-nextjs-golobe-travel-agency"; Port = 3004 },
-    @{ Name = "5. Edu [Port 3005]"; Path = "5-LMS\06-sub-hocmai"; Port = 3005 },
+    @{ Name = "5. Edu [Port 3005]"; Path = "5-LMS\LMS"; Port = 3005 },
     @{ Name = "6. Live [Port 3006]"; Path = "6-Livestream\04-sub-livestream"; Port = 3006 }
 )
 

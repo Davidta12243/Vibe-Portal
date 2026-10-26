@@ -1,0 +1,258 @@
+PROJECT BRIEF: PRIVATE ONLINE LEARNING PLATFORM (LMS)
+1. Vai trò của bạn
+Bạn là Senior Full-stack Developer, UI/UX Designer và Software Architect. Hãy thiết kế và phát triển một nền tảng học trực tuyến riêng tư (Private LMS) có giao diện chuyên nghiệp, trải nghiệm học tập tốt và khả năng thương mại hóa thực tế.
+Không chỉ tạo một landing page hoặc giao diện tĩnh. Hãy xây dựng một ứng dụng có cấu trúc rõ ràng, có database, xác thực người dùng, phân quyền, quản lý nội dung, thanh toán và theo dõi tiến độ học tập.
+Trước khi sửa code, hãy kiểm tra cấu trúc dự án hiện tại, xác định công nghệ đang dùng và tận dụng những thành phần phù hợp. Không tự ý phá hỏng hoặc viết lại những chức năng đang hoạt động tốt.
+2. Mục tiêu sản phẩm
+Xây dựng một nền tảng học tập nơi:
+Chỉ những người được mời hoặc có tài khoản hợp lệ mới được tham gia hệ thống.
+Người học có thể khám phá bài giảng và xem hai video demo miễn phí: một video 5 phút và một video 20 phút.
+Người học có thể mua riêng từng bài giảng hoặc đăng ký gói thành viên.
+Sau khi thanh toán thành công, hệ thống tự động cấp quyền truy cập phù hợp.
+Mỗi bài giảng có video, tài liệu, bài tập và khả năng theo dõi tiến độ.
+Quản trị viên có thể quản lý toàn bộ nội dung, tài khoản, lời mời, đơn hàng, thành viên và tiến độ học tập.
+Ngôn ngữ mặc định: tiếng Việt. Thiết kế responsive, hoạt động tốt trên desktop, tablet và điện thoại.
+3. Phong cách UI/UX
+Thiết kế theo phong cách academic LMS hiện đại, kết hợp sự tối giản, chỉn chu của các sản phẩm Apple với cấu trúc rõ ràng của một nền tảng học thuật chuyên nghiệp.
+Yêu cầu:
+Giao diện sạch, dễ đọc, có phân cấp thông tin rõ ràng.
+Typography đẹp, nhất quán; ưu tiên font sans-serif hỗ trợ tiếng Việt.
+Khoảng trắng hợp lý, lưới bố cục cân đối, card và panel có bo góc vừa phải.
+Màu sắc trung tính: trắng, xám, xanh navy hoặc xanh học thuật làm màu nhấn.
+Sidebar, thanh điều hướng, bảng dữ liệu, tab, thanh tiến độ và dialog nhất quán.
+Animation tinh tế, nhanh và không gây phân tâm.
+Có dark mode nếu phù hợp nhưng không làm chậm MVP.
+Có trạng thái loading, empty state, error state, success state và skeleton loading.
+Có thông báo rõ ràng khi lưu dữ liệu, thanh toán, cập nhật tiến độ hoặc gặp lỗi.
+Không sử dụng quá nhiều gradient, hiệu ứng phát sáng, emoji trang trí hoặc banner quảng cáo.
+Không sử dụng dữ liệu giả như thể đó là dữ liệu thật của người dùng.
+Không để nút bấm, tab, tìm kiếm hoặc menu chỉ mang tính trang trí. Mọi thành phần tương tác phải có chức năng hoặc được đánh dấu rõ là chưa triển khai.
+4. Kiến trúc trang web
+A. Xác thực và lời mời
+Tạo các trang:
+Đăng nhập.
+Đăng ký theo lời mời.
+Chấp nhận lời mời qua email hoặc mã mời.
+Quên mật khẩu và đặt lại mật khẩu.
+Hồ sơ cá nhân và cài đặt tài khoản.
+Chỉ người được phép mới có thể tạo tài khoản. Không cho phép người lạ tự đăng ký công khai nếu quản trị viên chưa bật tùy chọn này.
+Quản trị viên có thể tạo, thu hồi và đặt hạn sử dụng cho lời mời.
+Phân biệt quyền tham gia hệ thống với quyền xem nội dung trả phí.
+B. Dashboard người học
+Sau khi đăng nhập, hiển thị:
+Lời chào và thông tin tài khoản.
+Nút tiếp tục học.
+Danh sách khóa học và bài giảng đang học.
+Tiến độ học tập.
+Bài tập chưa hoàn thành.
+Các tài liệu truy cập gần đây.
+Gói thành viên và trạng thái quyền truy cập.
+Bài giảng mới được cấp quyền.
+Lịch sử hoạt động gần đây.
+Tất cả dữ liệu phải được lấy từ tài khoản hiện tại, không dùng số liệu cố định để giả lập.
+C. Thư viện bài giảng
+Xây dựng trang thư viện có:
+Tìm kiếm theo tên, mô tả và chủ đề.
+Bộ lọc theo danh mục, mức độ và loại nội dung.
+Sắp xếp theo tên, mới cập nhật hoặc mức độ phổ biến nếu có dữ liệu.
+Card bài giảng có ảnh bìa, tên, mô tả, thời lượng và trạng thái truy cập.
+Nhãn phân biệt nội dung miễn phí, nội dung mua lẻ và nội dung dành cho thành viên.
+Hiển thị rõ nội dung đã sở hữu.
+Phân trang hoặc tải thêm khi số lượng bài giảng lớn.
+D. Trang chi tiết bài giảng
+Mỗi bài giảng có:
+Tên, ảnh bìa, mô tả.
+Thông tin giảng viên.
+Kiến thức và kỹ năng người học sẽ nhận được.
+Đối tượng phù hợp.
+Danh sách chương, bài học và tài nguyên.
+Hai video demo: 5 phút và 20 phút.
+Thông tin giá mua lẻ.
+Thông tin về gói thành viên bao gồm bài giảng.
+Nút mua bài giảng hoặc đăng ký thành viên.
+Nội dung khóa và biểu tượng khóa khi người dùng chưa có quyền.
+Hai video demo phải là hai nội dung độc lập, có thể xem theo lựa chọn của người dùng. Quản trị viên có thể thay đổi video, thời lượng hiển thị và chế độ truy cập.
+Không bắt buộc người dùng xem hết video demo này mới được mở video demo còn lại.
+Nếu người dùng đã có quyền truy cập, thay nút mua bằng nút “Vào học”.
+E. Phòng học
+Thiết kế giao diện học tập với:
+Video player lớn.
+Sidebar danh sách chương và bài học.
+Thanh tiến độ khóa học.
+Tab nội dung bài học.
+Tab tài liệu.
+Tab ghi chú cá nhân.
+Tab bài tập.
+Điều hướng bài trước và bài tiếp theo.
+Nút đánh dấu hoàn thành.
+Khả năng tiếp tục video từ vị trí xem gần nhất.
+Tự động lưu tiến độ định kỳ.
+Lưu trạng thái hoàn thành từng bài học.
+Không đánh dấu hoàn thành chỉ vì người dùng mở trang. Hãy xác định quy tắc hoàn thành rõ ràng, có thể kết hợp tỷ lệ xem video, bài tập và xác nhận của người học.
+F. Tài liệu và bài tập
+Hỗ trợ các tài nguyên như:
+PDF.
+Slide.
+Liên kết tham khảo.
+Tệp đính kèm được quản trị viên cho phép.
+Bài tập trắc nghiệm.
+Câu hỏi đúng/sai.
+Câu hỏi trả lời ngắn nếu có thể chấm phù hợp.
+Bài tập phải lưu câu trả lời, điểm số, thời điểm nộp và số lần làm. Cho phép quản trị viên cấu hình số lần làm, điểm đạt và đáp án đúng.
+Không cung cấp đáp án hoặc dữ liệu chấm điểm bí mật trong mã frontend trước khi người học nộp bài.
+G. Mua lẻ và thành viên
+Hỗ trợ hai mô hình thương mại:
+Mua riêng từng bài giảng hoặc khóa học.
+Đăng ký gói thành viên theo tháng hoặc năm.
+Quản trị viên có thể cấu hình:
+Tên sản phẩm.
+Giá bán.
+Mô tả quyền lợi.
+Danh sách bài giảng được bao gồm.
+Thời hạn truy cập.
+Trạng thái đang bán hoặc tạm ngừng.
+Chính sách hoàn tiền và gia hạn.
+Xây dựng trang giá và trang so sánh quyền lợi giữa các gói.
+Quy tắc quan trọng:
+Người mua lẻ chỉ có quyền đối với nội dung đã mua.
+Thành viên chỉ truy cập nội dung nằm trong phạm vi gói đang hiệu lực.
+Khi thành viên hết hạn, thu hồi quyền được cấp riêng bởi gói đó.
+Quyền mua lẻ vĩnh viễn phải được giữ độc lập với quyền thành viên nếu chính sách sản phẩm quy định như vậy.
+Nếu người dùng đã sở hữu bài giảng, không yêu cầu họ mua lại.
+Không mặc định mọi thành viên đều có quyền truy cập tất cả nội dung.
+H. Thanh toán
+Thiết kế quy trình thanh toán với backend thực sự.
+Ban đầu, ưu tiên tích hợp QR chuyển khoản qua nhà cung cấp phù hợp tại Việt Nam, chẳng hạn SePay, hoặc cổng thanh toán khác có tài liệu API chính thức.
+Quy trình:
+Người dùng chọn sản phẩm.
+Server tự tra giá từ database.
+Server tạo đơn hàng với mã duy nhất.
+Hiển thị QR hoặc chuyển sang cổng thanh toán.
+Server xác minh giao dịch qua webhook hoặc cơ chế xác nhận chính thức.
+Cập nhật trạng thái đơn hàng.
+Cấp quyền truy cập tương ứng.
+Hiển thị kết quả và lưu lịch sử giao dịch.
+Yêu cầu bảo mật:
+Không tin giá tiền hoặc trạng thái thanh toán do frontend gửi lên.
+Không cấp quyền chỉ dựa vào trang redirect sau thanh toán.
+Xác thực chữ ký webhook theo tài liệu của nhà cung cấp.
+Xử lý webhook lặp theo cơ chế idempotency.
+Kiểm tra mã đơn, số tiền và trạng thái giao dịch.
+Có trạng thái pending, paid, failed, cancelled và refunded phù hợp.
+Không tự xác nhận thanh toán giả lập trên môi trường production.
+Có trang giao dịch của tôi và hướng dẫn xử lý giao dịch chậm.
+Có cơ chế đối soát và hoàn tiền theo quyền hạn quản trị.
+Không lưu dữ liệu thẻ thanh toán nhạy cảm trên hệ thống.
+Nếu chưa có API key hoặc tài khoản merchant, hãy xây adapter và giao diện tích hợp, cung cấp chế độ sandbox rõ ràng. Không tuyên bố thanh toán thật đã hoạt động khi chưa cấu hình và kiểm thử.
+I. Quản trị viên
+Tạo dashboard quản trị riêng, chỉ dành cho tài khoản có role admin.
+Chức năng:
+Quản lý tài khoản.
+Mời và thu hồi lời mời.
+Quản lý vai trò.
+Tạo và chỉnh sửa khóa học.
+Tạo chương và bài học.
+Quản lý video demo và video full.
+Quản lý tài liệu và bài tập.
+Quản lý giá, sản phẩm và gói thành viên.
+Xem đơn hàng và giao dịch.
+Cấp hoặc thu hồi quyền thủ công có ghi nhật ký.
+Quản lý trạng thái thành viên.
+Theo dõi tiến độ và kết quả bài tập.
+Thống kê doanh thu và hiệu quả video demo khi có dữ liệu.
+Hỗ trợ lưu bản nháp, xem trước trước khi xuất bản và xác nhận trước các thao tác nguy hiểm.
+5. Công nghệ đề xuất
+Nếu dự án chưa có công nghệ sẵn, sử dụng:
+Next.js với App Router.
+TypeScript.
+Tailwind CSS.
+shadcn/ui.
+Supabase PostgreSQL.
+Supabase Auth.
+Supabase Storage cho tài liệu không cần hệ thống video chuyên dụng.
+Cloudflare Stream hoặc dịch vụ video tương đương có token bảo vệ.
+Vercel hoặc nền tảng tương thích để triển khai.
+Tách biệt frontend, logic server, truy cập database và tích hợp thanh toán thành các module rõ ràng.
+Không để secret key trong frontend hoặc repository. Dùng biến môi trường và cung cấp file .env.example chỉ chứa tên biến cùng giá trị minh họa an toàn.
+Nếu dự án đã có stack phù hợp, hãy giữ stack hiện có thay vì thay đổi không cần thiết.
+6. Thiết kế database
+Tạo schema có quan hệ rõ ràng, migration và dữ liệu seed cho môi trường development.
+Các nhóm bảng tối thiểu:
+profiles
+invitations
+courses
+course_sections
+lessons
+lesson_resources
+products
+product_entitlements
+orders
+order_items
+payments
+subscriptions
+entitlements
+lesson_progress
+lesson_notes
+quizzes
+quiz_questions
+quiz_options
+quiz_attempts
+audit_logs
+Có thể điều chỉnh tên và cấu trúc nếu cần, nhưng phải bảo đảm mỗi bảng có khóa chính, khóa ngoại, timestamps và index phù hợp.
+Phân biệt dữ liệu sản phẩm, đơn hàng, giao dịch thanh toán và quyền truy cập. Không gộp tất cả vào một trường trạng thái thanh toán.
+Dùng migration để quản lý thay đổi schema. Không phụ thuộc vào việc chỉnh database thủ công mà không có tài liệu.
+7. Phân quyền và bảo mật
+Triển khai xác thực và authorization tại server.
+Phân biệt tối thiểu:
+Admin.
+Người học đã đăng nhập.
+Khách chưa đăng nhập nếu được phép xem demo.
+Dùng Row Level Security cho các bảng phù hợp. Người dùng chỉ được đọc hoặc sửa dữ liệu cá nhân của mình, ngoại trừ các chức năng được cấp quyền rõ ràng.
+Mọi yêu cầu lấy video full, tài liệu trả phí, bài tập và thông tin khóa học phải kiểm tra quyền ở backend.
+Dùng signed URL hoặc token có thời hạn cho video trả phí khi dịch vụ video hỗ trợ.
+Không cho phép người dùng tự cập nhật role, giá tiền, quyền truy cập hoặc trạng thái thanh toán.
+Ghi audit log cho các thao tác nhạy cảm của admin.
+Có xử lý lỗi, giới hạn tốc độ với các endpoint nhạy cảm và xác thực dữ liệu đầu vào.
+8. Yêu cầu kỹ thuật và chất lượng
+Code dễ đọc, chia module và có type đầy đủ.
+Không tạo một file khổng lồ chứa toàn bộ ứng dụng.
+Tái sử dụng component giao diện.
+Có kiểm tra input và xử lý lỗi rõ ràng.
+Có accessibility cơ bản, hỗ trợ bàn phím và nhãn cho form.
+Có tối ưu responsive và hiệu năng.
+Không commit secret key.
+Không sử dụng mock data làm dữ liệu production.
+Không để chức năng quan trọng chỉ hoạt động bằng state phía client.
+Không bỏ qua bảo mật vì mục tiêu làm demo nhanh.
+Viết test cho các chức năng quan trọng, đặc biệt là quyền truy cập và thanh toán:
+Người chưa mua không lấy được video full.
+Người mua bài A không tự động lấy được bài B.
+Thành viên hết hạn không còn quyền từ gói.
+Người đã mua lẻ vẫn giữ quyền theo chính sách.
+Webhook gửi lặp không tạo quyền hoặc ghi nhận doanh thu trùng.
+Người dùng không thể tự nâng quyền thành admin.
+Đơn hàng thất bại không được cấp quyền.
+Tài khoản này không đọc được ghi chú hoặc tiến độ của tài khoản khác.
+9. Kế hoạch triển khai
+Làm theo thứ tự:
+Giai đoạn 1: Kiểm tra dự án, đề xuất kiến trúc, tạo sitemap và danh sách chức năng.
+Giai đoạn 2: Xây design system, layout, sidebar, dashboard, thư viện và trang chi tiết bài giảng.
+Giai đoạn 3: Tạo database, authentication, invitations và phân quyền.
+Giai đoạn 4: Xây phòng học, video, tài liệu, bài tập và theo dõi tiến độ.
+Giai đoạn 5: Xây sản phẩm mua lẻ, gói thành viên, đơn hàng và quyền truy cập.
+Giai đoạn 6: Tích hợp thanh toán sandbox, webhook và quy trình cấp quyền.
+Giai đoạn 7: Xây trang admin, kiểm thử bảo mật, sửa lỗi và chuẩn bị triển khai.
+Sau mỗi giai đoạn:
+Chạy ứng dụng và kiểm tra lỗi.
+Chạy lint, typecheck và test phù hợp.
+Kiểm tra giao diện trên desktop và mobile.
+Báo cáo file đã tạo hoặc thay đổi.
+Nêu chức năng đã hoàn thành, chức năng còn thiếu và cách kiểm thử.
+Không tuyên bố một tính năng đã hoàn thành nếu chưa thực sự chạy được.
+10. Quy tắc làm việc
+Trước tiên, hãy kiểm tra codebase hiện tại và lập kế hoạch thực hiện ngắn gọn.
+Sau đó bắt đầu triển khai trực tiếp, không chỉ trả lời bằng lý thuyết hoặc đưa ra ví dụ code rời rạc.
+Nếu thiếu API key, tài khoản thanh toán hoặc thông tin video, hãy tiếp tục xây những phần có thể hoàn thành, sử dụng sandbox hoặc adapter được đánh dấu rõ ràng, và liệt kê chính xác những gì tôi cần cấu hình.
+Không tự bịa thông tin tích hợp. Đối chiếu tài liệu chính thức của thư viện và nhà cung cấp khi cần.
+Ưu tiên một MVP hoạt động thực sự, bảo mật và dễ mở rộng hơn một sản phẩm có nhiều màn hình nhưng chỉ là giao diện giả.
+Bắt đầu bằng việc kiểm tra dự án và trình bày kế hoạch triển khai, sau đó thực hiện giai đoạn đầu tiên.

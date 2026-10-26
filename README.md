@@ -24,7 +24,7 @@ Toàn bộ 7 dự án trên máy của bạn đã được thiết lập cổng 
 | **02** | `2-Food-Selling/food-ecommerce-app` | **Vibe Farm / Food** | Đi chợ online, thực phẩm sạch (Sendo Farm) | Vite + React + Redux | `http://localhost:3002` |
 | **03** | `3-Computer-Service/pc-builder` | **Vibe Tech / PC** | Linh kiện máy tính & Ráp PC (Phúc Anh) | Next.js 13 | `http://localhost:3003` |
 | **04** | `4-Booking-Office/.../travel-agency` | **Vibe Travel** | Đặt vé máy bay & phòng khách sạn (Traveloka) | Next.js 14 + MongoDB | `http://localhost:3004` |
-| **05** | `5-LMS/06-sub-hocmai` | **Vibe Edu** | Khóa học online & Video bài giảng (Hocmai) | Next.js 14 + Prisma | `http://localhost:3005` |
+| **05** | `5-LMS/LMS` | **Vibe Edu** | Nền tảng học trực tuyến LMS | Next.js 16 + Tailwind | `http://localhost:3005` |
 | **06** | `6-Livestream/04-sub-livestream` | **Vibe Live Studio** | Đặt phòng live & Studio livestream WebRTC | Next.js 14 + LiveKit | `http://localhost:3006` |
 
 ---
@@ -55,7 +55,7 @@ E:\Document\Web tổng\
 │   └── fullstack-nextjs-golobe-travel-agency/            # [PORT 3004] Du lịch & Vé Traveloka
 │
 ├── 5-LMS/
-│   └── 06-sub-hocmai/                                    # [PORT 3005] Khóa học online Hocmai
+│   └── LMS/                                              # [PORT 3005] Nền tảng học trực tuyến LMS
 │
 └── 6-Livestream/
     └── 04-sub-livestream/                                # [PORT 3006] Studio Livestream

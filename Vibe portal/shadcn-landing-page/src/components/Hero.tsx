@@ -20,7 +20,7 @@ export const Hero = () => {
         </main>
 
         <p className="text-lg md:text-xl text-muted-foreground md:w-11/12 mx-auto lg:mx-0 leading-relaxed">
-          Nền tảng tích hợp trung tâm kết nối liền mạch 6 phân hệ chuyên sâu: Mua sắm (Shopee), Nông sản (Sendo Farm), Ráp PC (Phúc Anh), Du lịch (Traveloka), Khóa học (Hocmai) và Livestream Studio.
+          Nền tảng tích hợp trung tâm kết nối liền mạch 6 phân hệ chuyên sâu: Mua sắm (Shopee), Nông sản (Sendo Farm), Ráp PC (Phúc Anh), Du lịch (Traveloka), Khóa học (LMS) và Livestream Studio.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
