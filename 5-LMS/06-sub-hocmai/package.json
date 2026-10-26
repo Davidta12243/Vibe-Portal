@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3005",
-    "build": "next build",
+    "build": "prisma generate && next build",
+    "postinstall": "prisma generate",
     "start": "next start",
     "lint": "next lint"
   },
@@ -33,6 +34,7 @@
     "react-hook-form": "^7.46.2",
     "react-hot-toast": "^2.4.1",
     "react-quill": "^2.0.0",
+    "prisma": "^5.3.1",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
     "uploadthing": "^5.6.1",
@@ -46,8 +48,12 @@
     "eslint": "latest",
     "eslint-config-next": "latest",
     "postcss": "latest",
-    "prisma": "^5.3.1",
     "tailwindcss": "latest",
     "typescript": "latest"
+  },
+  "allowScripts": {
+    "prisma": true,
+    "@prisma/client": true,
+    "@prisma/engines": true
   }
 }
