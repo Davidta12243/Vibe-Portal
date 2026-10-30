@@ -34,7 +34,7 @@ export const Hero = () => {
           </a>
 
           <a
-            href={(import.meta.env.VITE_APP_SHOP_URL as string) || "http://localhost:3001"}
+            href={(import.meta.env.VITE_APP_SHOP_URL as string) || "https://1shop-virid.vercel.app/"}
             target="_blank"
             rel="noreferrer noopener"
             className={`text-base font-semibold px-6 py-5 ${buttonVariants({
