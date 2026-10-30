@@ -2,8 +2,8 @@
 $baseDir = $PSScriptRoot
 
 $apps = @(
-    @{ Name = "0. Portal [Port 3000]"; Path = "Vibe portal\shadcn-landing-page"; Port = 3000 },
-    @{ Name = "1. Shop [Port 3001]"; Path = "1-Shop\Shopee-Clone-Reactjs\Shopee\ShopeeClone"; Port = 3001 },
+    @{ Name = "0. Portal [Port 3000]"; Path = "0-Vibe portal\shadcn-landing-page"; Port = 3000 },
+    @{ Name = "1. Shop [Port 3001]"; Path = "1-Shop\ShopeeClone"; Port = 3001 },
     @{ Name = "2. Food [Port 3002]"; Path = "2-Food-Selling\food-ecommerce-app"; Port = 3002 },
     @{ Name = "3. PC [Port 3003]"; Path = "3-Computer-Service\pc-builder"; Port = 3003 },
     @{ Name = "4. Travel [Port 3004]"; Path = "4-Booking-Office\fullstack-nextjs-golobe-travel-agency"; Port = 3004 },

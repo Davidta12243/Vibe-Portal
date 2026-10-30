@@ -19,8 +19,8 @@ Toàn bộ 7 dự án trên máy của bạn đã được thiết lập cổng 
 
 | STT | Thư mục dự án | Phân hệ (Web Con) | Phong cách tham chiếu | Framework / Build Tool | Port Local (Đã cấu hình) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **00** | `Vibe portal/shadcn-landing-page` | **Vibe Studio Portal** | Trang chủ hệ sinh thái, Đăng nhập SSO | Vite + React + Tailwind | `http://localhost:3000` |
-| **01** | `1-Shop/.../ShopeeClone` | **Vibe Shop** | Sàn TMĐT đa ngành hàng (Shopee) | Vite + React + TypeScript | `http://localhost:3001` |
+| **00** | `0-Vibe portal/shadcn-landing-page` | **Vibe Studio Portal** | Trang chủ hệ sinh thái, Đăng nhập SSO | Vite + React + Tailwind | `http://localhost:3000` |
+| **01** | `1-Shop/ShopeeClone` | **Vibe Shop** | Sàn TMĐT đa ngành hàng (Shopee) | Vite + React + TypeScript | `http://localhost:3001` |
 | **02** | `2-Food-Selling/food-ecommerce-app` | **Vibe Farm / Food** | Đi chợ online, thực phẩm sạch (Sendo Farm) | Vite + React + Redux | `http://localhost:3002` |
 | **03** | `3-Computer-Service/pc-builder` | **Vibe Tech / PC** | Linh kiện máy tính & Ráp PC (Phúc Anh) | Next.js 13 | `http://localhost:3003` |
 | **04** | `4-Booking-Office/.../travel-agency` | **Vibe Travel** | Đặt vé máy bay & phòng khách sạn (Traveloka) | Next.js 14 + MongoDB | `http://localhost:3004` |
@@ -39,11 +39,11 @@ E:\Document\Web tổng\
 ├── README.md                                             # Tài liệu toàn bộ hệ thống
 ├── notebook 2.docx                                       # Ghi chú yêu cầu ban đầu
 │
-├── Vibe portal/
+├── 0-Vibe portal/
 │   └── shadcn-landing-page/                              # [PORT 3000] Web Tổng Vibe Studio
 │
 ├── 1-Shop/
-│   └── Shopee-Clone-Reactjs/Shopee/ShopeeClone/          # [PORT 3001] Sàn TMĐT Shopee clone
+│   └── ShopeeClone/                                      # [PORT 3001] Sàn TMĐT Shopee clone
 │
 ├── 2-Food-Selling/
 │   └── food-ecommerce-app/                               # [PORT 3002] Nông sản & Thực phẩm sạch
@@ -190,7 +190,7 @@ Bất cứ khi nào bạn muốn mở web nào, chỉ cần mở Terminal vào t
   ```
 * **Chạy Web Bán hàng (Shopee):**
   ```powershell
-  cd "E:\Document\Web tổng\1-Shop\Shopee-Clone-Reactjs\Shopee\ShopeeClone"
+  cd "E:\Document\Web tổng\1-Shop\ShopeeClone"
   npm install
   npm run dev
   # Mở tại: http://localhost:3001
