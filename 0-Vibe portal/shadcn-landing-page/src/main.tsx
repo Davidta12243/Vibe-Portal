@@ -11,3 +11,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     </ThemeProvider>
   </React.StrictMode>
 );
+// Build version: 1.0.1 - Connected 6 sub-apps live on Vercel
+
