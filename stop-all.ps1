@@ -1,8 +1,8 @@
 Write-Host "========================================================" -ForegroundColor Red
-Write-Host "  DANG DUNG HE THONG 7 WEB (PORTS 3000-3006)" -ForegroundColor Yellow
+Write-Host "  DANG DUNG HE THONG 8 WEB (PORTS 3000-3007)" -ForegroundColor Yellow
 Write-Host "========================================================" -ForegroundColor Red
 
-$ports = 3000..3006
+$ports = 3000..3007
 foreach ($p in $ports) {
     $conns = Get-NetTCPConnection -LocalPort $p -State Listen -ErrorAction SilentlyContinue
     if ($conns) {

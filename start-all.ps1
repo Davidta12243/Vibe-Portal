@@ -8,11 +8,12 @@ $apps = @(
     @{ Name = "3. PC [Port 3003]"; Path = "3-Computer-Service\pc-builder"; Port = 3003 },
     @{ Name = "4. Travel [Port 3004]"; Path = "4-Booking-Office\fullstack-nextjs-golobe-travel-agency"; Port = 3004 },
     @{ Name = "5. Edu [Port 3005]"; Path = "5-LMS\LMS"; Port = 3005 },
-    @{ Name = "6. Live [Port 3006]"; Path = "6-Livestream\04-sub-livestream"; Port = 3006 }
+    @{ Name = "6. Live [Port 3006]"; Path = "6-Livestream\04-sub-livestream"; Port = 3006 },
+    @{ Name = "7. Admin Hub [Port 3007]"; Path = "Admin\vibe-admin-hub"; Port = 3007 }
 )
 
 Write-Host "========================================================" -ForegroundColor Cyan
-Write-Host "  🌟 DANG KHOI DONG HE THONG 7 WEB VIBE STUDIO (3000-3006)" -ForegroundColor Yellow
+Write-Host "  🌟 DANG KHOI DONG HE THONG 8 WEB VIBE STUDIO (3000-3007)" -ForegroundColor Yellow
 Write-Host "========================================================" -ForegroundColor Cyan
 
 foreach ($app in $apps) {
@@ -23,7 +24,7 @@ foreach ($app in $apps) {
 }
 
 Write-Host "`n========================================================" -ForegroundColor Cyan
-Write-Host "  DA KHOI DONG XONG! Vui long kiem tra 7 cua so terminal:" -ForegroundColor Yellow
+Write-Host "  DA KHOI DONG XONG! Vui long kiem tra 8 cua so terminal:" -ForegroundColor Yellow
 Write-Host "  - Web Tong (Portal) : http://localhost:3000" -ForegroundColor White
 Write-Host "  - 1. Shop           : http://localhost:3001" -ForegroundColor White
 Write-Host "  - 2. Food           : http://localhost:3002" -ForegroundColor White
@@ -31,4 +32,5 @@ Write-Host "  - 3. PC Builder     : http://localhost:3003" -ForegroundColor Whit
 Write-Host "  - 4. Travel Booking : http://localhost:3004" -ForegroundColor White
 Write-Host "  - 5. Edu LMS        : http://localhost:3005" -ForegroundColor White
 Write-Host "  - 6. Livestream     : http://localhost:3006" -ForegroundColor White
+Write-Host "  - 7. Admin Hub      : http://localhost:3007" -ForegroundColor Yellow
 Write-Host "========================================================" -ForegroundColor Cyan
